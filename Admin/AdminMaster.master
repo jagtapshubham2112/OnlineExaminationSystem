@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../css/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            <div class="logo">
+            </div>
+            <div class="header">
+                 
+                <div class="title">
+                    <asp:Image ID="ImgHeader" ImageUrl="~/Images/Admin_header.jpg" runat="server" />
+                </div>
+                <div class="loginDisplay">
+                 
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 250px;">
+                                    <asp:Label ID="lblLastLogin" runat="server" ForeColor="#CC00CC"></asp:Label>
+                                    <asp:Label ID="lblWelcome" runat="server" Font-Bold="True" Text="WELCOME !" ForeColor="Aqua"></asp:Label>
+                                </td>
+                                <td class="auto-style1">
+                                    <asp:ImageButton ID="ImgProfile" runat="server" BorderStyle="Solid" BorderWidth="1px" Height="30px" PostBackUrl="~/ViewProfile.aspx" ToolTip="View Profile" Visible="False" Width="30px" ImageUrl="~/Images/profile.png" />
+
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td style="width: 200px;">&nbsp;</td>
+                                            <td style="text-align: center; border: 1px solid Orange;">
+                                                <asp:LinkButton ID="LnkBtnLogout" runat="server" ForeColor="White" Enabled="False"  Width="110px"  Height="20px" OnClick="LnkBtnLogout_Click">Logout</asp:LinkButton>
+                                            </td>
+                                            <td style="text-align: center; border: 1px solid Orange;">
+                                                <asp:LinkButton ID="LnkBtnLogin" runat="server" ForeColor="White" PostBackUrl="~/Admin/AdminLogin.aspx" Width="110px"   Height="20px" >Login</asp:LinkButton>
+                                            </td>
+
+                                            <td style="text-align: center; border: solid 1px; border-color: Orange;">
+                                                <asp:LinkButton ID="LnkBtnNew" runat="server" ForeColor="White" PostBackUrl="~/UserRegistration.aspx" Width="110px"  Height="20px">New</asp:LinkButton>
+                                            </td>                                          
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 100px;">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+              
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="False"
+                        Orientation="Horizontal" IncludeStyleBlock="False">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home"></asp:MenuItem>                          
+                            <asp:MenuItem NavigateUrl="~/Admin/AdminHome.aspx" Text="Admin Home" Value="Admin Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/AddSubjects.aspx" Text="Add Subject" Value="Add Subject"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/AddQuestion.aspx" Text="Add Question" Value="Add Question"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/SetEamination.aspx" Text="Set Question Paper" Value="Set Question Paper"></asp:MenuItem>
+<asp:MenuItem Text="Add Ebooks" Value="Add Ebooks" NavigateUrl="~/Admin/AddEbooks.aspx">
+</asp:MenuItem>
+                            <asp:MenuItem Text="Manage" Value="Manage">
+                                <asp:MenuItem NavigateUrl="~/Admin/AddCountry.aspx" Text="AddCountry" Value="AddCountry"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddState.aspx" Text="AddState" Value="AddState"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddDistrict.aspx" Text="AddDistrict" Value="AddDistrict"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddTaluka.aspx" Text="AddTaluka" Value="AddTaluka"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/AddCity.aspx" Text="AddCity" Value="AddCity"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
+            </div>
+            <div class="main">               
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear">
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li><a href="../Home.aspx">Home Page</a> | </li>                  
+                   
+                    <li><a href="Admin/AdminLogin.aspx">Admin</a> </li>
+
+                </ul>
+                <p>
+                    Copyright &copy; Allrights reserved, 2022
+                    <br />
+                    Design by : 1) Samarth
+                </p>
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

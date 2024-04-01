@@ -1,0 +1,22 @@
+﻿#styled_table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#styled_table td, #songdetails th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#styled_table tr:nth-child(even){background-color: #f2f2f2;}
+
+/*#styled_table tr:hover {background-color: #ddd;}*/
+
+#styled_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ff6a00;/*#4CAF50;*/
+  color: white;
+}
