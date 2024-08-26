@@ -1,7 +1,7 @@
 # Online Examination System
 
 ## Overview
-The Online Examination System is a web-based application developed using ASP.NET for conducting exams online. It provides a platform for both instructors and students to efficiently manage and take exams in a secure environment. This project aims to streamline the examination process, making it convenient, reliable, and scalable.
+The Online Examination System is a web-based application developed using ASP.NET for conducting exams online. It provides a platform for both instructors and students to efficiently manage and take exams in a secure environment. This project aims to streamline the examination process, making it convenient, reliable and scalable.
 
 ## Features
 - **User Authentication:** Secure user authentication system for both instructors and students.
